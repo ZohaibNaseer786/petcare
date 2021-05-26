@@ -24,13 +24,9 @@ const App = () => {
 
   let getDateAndTime = (date) => {
     var d = new Date(date);
-    var datetime = d.getDate() + " "
-      + (d.getMonth() + 1) + " "
-      + d.getFullYear() + " "
-      + d.getHours() + ":"
-      + d.getMinutes() + ":"
-      + d.getSeconds()
-
+    var datetime = d.getDate() + "-"
+      + (d.getMonth() + 1) + "-"
+      + d.getFullYear()
     return datetime
   }
 
@@ -97,7 +93,7 @@ const App = () => {
           />
           <View style={styles.info}>
             <Text style={styles.userName}>{item.owner.firstName}{item.owner.lastName}</Text>
-            <Text style={styles.userEmail}>{item.owner.email}</Text>
+            {/* <Text style={styles.userEmail}>{item.owner.email}</Text> */}
           </View>
         </View>
         <View style={styles.viewStyle} />
@@ -120,7 +116,6 @@ const App = () => {
             }} />
         </View>
 
-
         <Text numberOfLines={3} style={{ fontSize: 18 }}>{item.text}</Text>
         <Text style={styles.linkText}>{item.link}</Text>
 
@@ -129,9 +124,9 @@ const App = () => {
           <Text style={styles.likeText}>💙 {item.likes} likes</Text>
           <Text style={styles.timeText}>{getDateAndTime(item.publishDate)}</Text>
         </View>
-        <View style={styles.viewStyle} />
+        {/* <View style={styles.viewStyle} />
         <Text style={styles.textStyle}>Get Post Comments</Text>
-        <Text style={styles.textStyle}>Get Owner Profile</Text>
+        <Text style={styles.textStyle}>Get Owner Profile</Text> */}
       </View>
     )
   }
